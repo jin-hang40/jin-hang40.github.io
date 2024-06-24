@@ -1,1 +1,144 @@
-hello world
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+		<title>金农农产品售卖商店</title>
+	</head>
+	<body>
+		<div class="header">
+			<div class="top">
+				<img src="./images/logo.png" alt="">
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li class="oli">
+						<a href="list2.html">本店农产品种类</a>
+					</li>
+					<li class="oli">
+						<a href="list3.html">本店活动</a>
+					</li>
+					<li class="oli">
+						<a href=list4.html>登录</a>	
+					</li>
+					<li class="oli">
+						<a href=list5.html>注册</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="app">
+		    <div class="list-img clearfix">
+				<div><img src="./images/1.jpg" alt=""></div>
+				<div><img src="./images/1-1.jpg" alt=""></div>
+				<div><img src="./images/1-2.jpg" alt=""></div>
+				<div><img src="./images/1-3.jpg" alt=""></div>
+				<div><img src="./images/1-4.jpg" alt=""></div>
+				<div><img src="./images/1.jpg" alt=""></div>
+		    </div>
+		    <div class="btn">
+		        <a class="left" href="javascript:;"></a>
+		        <a class="right" href="javascript:;"></a>
+		    </div>
+		</div>
+		<div class="father">
+			<h2 class="ch2">内容精选展示</h2>
+			<div class="con1">
+				<img src="./images/1.jpg" alt="">
+			</div>
+			<p class="p1">本店是金农东北特产售出店，主要贩卖东北特产。</p>
+			<p class="p1">本店在线下有多家门店，线上购买优惠九折起，外省满68元包邮。</p>
+			<p class="p1"></p>
+			<p class="p1">以下是我们店铺的一些相关介绍。</p>
+			<div class="con2">
+				<div>
+					<img src="./images/11.jpg" alt="">
+					<p>黑土地</p>
+					<p>我们的特产产地是广阔的东北黑土地，跟普通黄土不同，黑土地内含有丰厚的矿物质元素，且一年只收成一次，富有丰富的营养。</p>
+				</div>
+				<div>
+					<img src="./images/12.jpg" alt="">
+					<p>优质服务</p>
+					<p>专业客服，服务态度给您家的感觉。</p>
+				</div>
+				<div>
+					<img src="./images/13 .jpg" alt="">
+					<p>质量优质</p>
+					<p>我们所售卖的食品品质上佳，于每年新季前去采购，真材实料。</p>
+				</div>
+				<div>
+					<img src="./images/18(1).jpg" alt="">
+					<p>线下店铺</p>
+					<p>本店十几家线下店铺，欢迎大家前来选购。</p>
+				</div>
+				<div>
+					<img src="./images/15.jpg" alt="">
+					<p>售后无忧</p>
+					<p>本店商品出现任何质量问题，无理由退款，并将给出您满意的答复。</p>
+				</div>
+				<div>
+					<img src="./images/18 (1).jpg" alt="">
+					<p>网店24小时营业</p>
+					<p>本店线上店铺24小时营业，满足您的购物需求。</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+	 农产品 版权所有-金行 20220300003
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		window.onload = function(){
+			(function(lib){
+				let app = document.getElementById('app');
+				let listImg = document.querySelector('.list-img');
+				let left = document.querySelector('.left');
+				let right = document.querySelector('.right');
+				let timer =null;
+				let index = 0;
+				let pause = true;
+				function rightBth (){
+				    if(index===5){
+				        listImg.style.transition = 'none';
+				        listImg.style.left = 0;
+				        setTimeout(function(){
+				            index = 1;
+				            listImg.style.left = -index * 100 +'%';
+				            listImg.style.transition = '0.5s ease';
+				        },0)
+				    }else{
+				        index++;
+				        listImg.style.left = -index * 100 +'%';
+				    }
+				}
+				left.onclick = function(){
+				    if(index === 0){
+				        listImg.style.transition = 'none';
+				        listImg.style.left = -5 * 100 +'%';
+				        setTimeout(function(){
+				            index = 4;
+				            listImg.style.left = -index * 100 +'%';
+				            listImg.style.transition = '0.5s ease';
+				        },0)
+				    }else{
+				        index--;
+				        listImg.style.left = -index *100 +'%';
+				    }
+				}
+				right.onclick = rightBth;
+				timer = setInterval(rightBth, 3000);
+				app.onmouseenter = function(){
+					if(pause){
+						clearInterval(timer);
+						pause = false;
+					} 
+				}
+				app.onmouseleave = function(){
+					if(pause == false){
+						timer = setInterval(rightBth, 3000);
+						pause = true;
+					} 
+				}
+			})(window, window['lib'] || (window['lib'] = {}));
+		}
+	</script>
+</html>

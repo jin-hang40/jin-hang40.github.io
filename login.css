@@ -1,0 +1,88 @@
+html{
+	font-family: "microsoft yahei";
+	font-size: 16px;
+}
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+.auto{
+	margin: 0 auto;
+}
+.clearfix::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.top1{
+	width: 1000px;
+	height: 25px;
+	line-height: 25px;
+	background-color: #333;
+	color: #ccc;
+	font-size: 12px;
+}
+.top1>div{
+	width: 840px;
+}
+.top2{
+	width: 1000px;
+	height: 60px;
+	line-height: 60px;
+	background-color: orangered;
+}
+.top2 img{
+	width: 200px;
+	height: 60px;
+}
+.top2 ul{
+	width: 800px;
+	height: 60px;
+	float: right;
+}
+.top2 ul li{
+	width: 130px;
+	height: 60px;
+	float: left;
+	text-align: center;
+}
+.top2 ul li:hover{
+	background-color: rgba(0,0,0,0.5);
+}
+.top2 ul li a{
+	color: #fff;
+}
+h1{
+	height: 50px;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: darkblue;
+}
+.main{
+	width: 840px;
+}
+.main div{
+	width: 300px;
+	height: 70px;
+	line-height: 70px;
+	margin-left: 280px;
+}
+.main div input{
+	width: 210px;
+	height: 30px;
+}
+.footer{
+	margin-top: 50px;
+	width: 1000px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background-color: #333;
+	color: #999;
+}
